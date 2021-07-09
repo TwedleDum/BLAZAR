@@ -1,0 +1,1004 @@
+#BLAZAR the choose your own adventure game
+#This is a choose your own adventure game where the player can choose between 3 planets
+#The game will ask the user questions and the user will answer to progress through the game 
+#Blackmire is a planet where you explore villages and the wilderness, and get cought up in the war between blackmire and armada
+#Armada is a futuristic planet where you can play games to win money and explore the city
+#Marana is a land full of monsters and the player has to make the right choices to to win
+#Sorry if there are spelling errors
+
+
+
+import random
+import time
+
+a = 1
+b = 2
+c = 0.05
+
+def blackmire_win():
+    print()
+    print('                        /\ ')
+    print('                       /  \  /\ ')
+    print('                    /\/    \/  \ ')
+    print('           /\      /   /\/\  /\/\ ')
+    print('          /  \    /\/\/    \/    \ ')
+    print('   /\    / /\/\  /                  ')      
+    print('  /  \  /\/    \       ___I_       ')
+    print(' /\/\/\/              /\-_--\     ')
+    print('/      \             /  \_-__\    ')
+    print('                     |[]| [] |    ')
+def armada_win():
+    print('        _..._')
+    print(' .\'     \'.      _ ')
+    print('     /    .-""-\   _/ \ ')
+    print('   .-|   /:.   |  |   |')
+    print('   |  \  |:.   /.-\'-./') 
+    print('   | .-\'-;:__.\'    =/ ')
+    print('   .\'=  *=|     _.=\' ')
+    print('  /   _.  |    ; ')
+    print(' ;-.-\'|    \   | ')
+    print('/   | \    _\  _\ ')
+    print('\__/\'._;.  ==\' ==\ ')
+    print('         \    \   | ')
+    print('         /    /   / ')
+    print('         /-._/-._/ ')
+    print('         \   `\  \ ')
+    print('          `-._/._/ ')
+
+def print_ship():
+    print( 30 * "-" , "ARMADA SHIP" , 30 * "-")
+    print( "1. Ice Village")
+    print( "2. Capital of Blackmire")
+    print( "3. Cliffside Ocean Town")
+    print (67 * "-")
+
+
+
+def displayIntro():
+    gameOver = False
+    print()
+    print("WELCOME TO BLAZAR")
+    print( 'You have the option to travel to three different planets')
+    print()
+    print (67 * "-")
+    print()
+    time.sleep(a)
+    print('Blackmire(1)')
+    print()
+    time.sleep(a)
+    print('Armada(2)')
+    print()
+    time.sleep(a)
+    print('Marana(3)')
+    print()
+    print (67 * "-")
+    print()
+    time.sleep(a)
+    firstPlanet = input("What planet do you choose?(1/2/3)")
+    if firstPlanet == '1':
+        print()
+        planet1()
+    elif firstPlanet == '2':
+        print()
+        planet2()
+    elif firstPlanet == '3':
+        print()
+        planet3()
+        
+def planet1():  
+    print("WELCOME TO BLACKMIRE")
+    print('    .                  .-.    .  _   *     _   .')
+    print('           *          /   \     ((       _/ \       *    .')
+    print('         _    .   .--\/\_ \     `      /    \  *    ___')
+    print('     *  / \_    _/ ^      \/\'__        /\/\  /\  __/   \ *')
+    print('       /    \  /    .    _/  /  \  *  /    \/  \/ .` \_/\   .')
+    print('  .   /\/\  /\/ :  __  ^/  ^/    `--./.   ^  `-.\ _    _:\ _')
+    print('     /    \/  \  _/  \-  __/.  ^ _   \_   . \   _/ \ .  __/ \ ')
+    print('   /\  .-   `. \/     \ / -.   _/ \ -. `_/   \ /    `._/  ^  \ ')
+    print('  /  `-.__ ^   / .- .--     . /    `--./ .-   `-.  `-. `.  -  `. ')
+    print('       `.  / /      `-.   /  .-    / .   .    \    \  \  .-  ')
+    time.sleep(a)
+    print("be cautious of the many cliffs and mountains")
+    print()
+    time.sleep(b)
+    print("you land your ship in a vast forest with many trees")
+    print()
+    time.sleep(b)
+    print('you see campfire smoke in the distance')
+    print()
+    time.sleep(a)
+    print('you go and investigate')
+    time.sleep(b)
+    print()
+    print('as you get closer you realize it is an old man')
+    print()
+    time.sleep(b)
+    print('the old man is a merchant and is selling weapons')
+    print()
+    time.sleep(b)
+    print('but you only have the money to buy 1 weapon')
+    print(67 * "-")
+    time.sleep(b)
+         
+    print('sword(1)')
+    print('axe(2)')
+    print('bow(3)')
+    print(67 * "-")
+    print('HINT: A distance weapon is reccomended')
+    print()
+    time.sleep(a)
+    blackmire_wepons = input('What do you buy?(1/2/3)')
+
+
+
+    if blackmire_wepons == '1':
+            print()
+            print('you get the sword')
+            print()
+            time.sleep(b)
+            print('while you are heading back to your ship')
+            print()
+            time.sleep(b)
+            print('you hear something in the woods next to you')
+            print()
+            time.sleep(b)
+            print('it is a soldier with metalic armor aiming a gun right at you')
+            print()
+            time.sleep(b)
+            print('you dive into the brush next to you right before he can open fire')
+            print()
+            time.sleep(b)
+            print('you recognize that armor, it is an Armada soldier')
+            print()
+            time.sleep(b)
+            print('the sword is no use, and you are killed')
+            print('GAME OVER')
+            print()
+            time.sleep(b)
+            print('it is recommended that you get the bow next time')
+            print(67 * "-")
+
+    elif blackmire_wepons == '2':
+            print('you get the axe')
+            print()
+            time.sleep(b)
+            print('while you are heading back to your ship')
+            print()
+            time.sleep(b)
+            print('you hear something in the woods next to you')
+            print()
+            time.sleep(b)
+            print('it is a soldier with metalic armor aiming a gun right at you')
+            print()
+            time.sleep(b)
+            print('you dive into the brush next to you right before he can open fire')
+            print()
+            time.sleep(b)
+            print('you recognize that armor, it is an Armada soldier')
+            print()
+            time.sleep(b)
+            print('you throw your axe at him')
+            print()
+            time.sleep(b)
+            print('you did not completly kill the soldier, and he is calling for backup')
+            print()
+            time.sleep(b)
+            print('you try to stop him, but it is too late')
+            print()
+            time.sleep(b)
+            print('you are found and executed')
+            print('GAME OVER')
+            time.sleep(b)
+            print()
+            print('it is recomended that you get the bow next time')
+            print(67 * "-")
+    elif blackmire_wepons == '3':
+            time.sleep(b)
+            print('while you are heading back to your ship')
+            print()
+            time.sleep(b)
+            print('you hear something in the woods next to you')
+            print()
+            time.sleep(b)
+            print('it is a soldier with metalic armor aiming a gun at you')
+            print()
+            time.sleep(b)
+            print('you dive into the brush next to you right before he can open fire')
+            print()
+            time.sleep(b)
+            print('you recognize that armor, it is an Armada soldier')
+            print()
+            time.sleep(b)
+            print('you are able to shoot your bow, hiting him in the chest ')
+            print()
+            time.sleep(b)
+            print('you take his gun and sprint out of there')
+            print()
+            print()
+            time.sleep(b)
+
+            print('you find yourself in a village')
+            print('            |   _   _')
+            print('      . | . x .|.|-|.| ')
+            print('   |\ ./.\-/.\-|.|.|.|')
+            print('~~~|.|_|.|_|.|.|.|_|.|')
+            print()
+            time.sleep(b)
+            print('it looks as if Armada soldiers are everywhere')
+            print()
+            time.sleep(b)
+            print('you feel someone tap you on the back')
+            print()
+            time.sleep(b)
+            print('it is another Armada soldier')
+            print()
+            time.sleep(b)
+            print('but the soldier does not look ready to kill')
+            print()
+            time.sleep(b)
+            print('he asks for your identification')
+            print()
+            time.sleep(b)
+
+            print('you quickly think about your options')
+            print(67 * "-")
+            time.sleep(a)
+            print('do you run(1)')
+            time.sleep(a)
+            print('or')
+            time.sleep(a)
+            print('do you tell him you do not have an identication(2)')
+            print(67 * "-")
+            time.sleep(a)
+            blackmire_2 = input('What option do you choose? (1/2)')
+
+            if blackmire_2 == '1':
+                print('surprisingly running works')
+                time.sleep(b)
+                print()
+                print('you run and escape to the mountains')
+                time.sleep(b)
+                print()
+                print('after living in the mountains for a few days ')
+                time.sleep(b)
+                print()
+                print('you find an abandoned crashed ship')
+                time.sleep(b)
+                print(67 * "-")
+                print('Do you try to fix it?(1)')
+                time.sleep(b)
+                print('or')
+                time.sleep(a)
+                print('do you move on?(2)')
+                print(67 * "-")
+                time.sleep(b)
+                blackmire_3 = input('What option do you choose?(1/2)')
+                if blackmire_3 == '1':
+                    print('There is a password to the ship')
+                    
+                    print('It is encripted to read')
+                    print()
+                    password = ['1','2','3','4','5']
+                    random.shuffle(password)
+                    print()
+                    print(password)
+                    print('You decide the password using your incredible reasoning skills and get it')
+                    password.sort()
+                    print(password)
+                    print()
+                    print('Armada isn\'t very creative with their passwords')
+                    print()
+                    print('Now you have the option to go anywhere in Blackmire')
+                    
+                    
+                    print_ship()    
+                    choice = input("Enter your choice [1-3]: ")
+     
+                    if choice== '1':
+                        print( "You go to the ice village and you love it so much you make it your home")
+                        blackmire_win()
+                        print()
+                        print('You live the rest of your life in peace')
+                        print()
+                        print('YOU WIN')
+                    if choice== '2':
+                        print()
+                        print("You go to the capital")
+                        print()
+                        print('Armada anti aircraft guns realize that the ship is highjacked and you are shot down')
+                        print()
+                        print('GAME OVER')
+       
+                    if choice== '3':
+                        print( "The cliffs on the ocean are very beautiful")
+                        print(' You dicide to make this your home')
+                        print('YOU WIN')
+        
+                if blackmire_3 == '2':
+                    print('after wondering around the mountain for a few more days')
+                    print()
+                    print('you get lost, and run out of food')
+                    print()
+                    print('GAME OVER')
+                    print()
+                    print('it is recommended that you fix the ship next time')
+
+                    
+            if blackmire_2 == '2':
+                print('you are immediately questioned')
+                time.sleep(b)
+                print()
+                print('they figure out you were the one who attacked the armada soldier')
+                print()
+                time.sleep(b)
+                print('you are put under arrest and put in the back of a government van')
+                time.sleep(b)
+                print()
+                print('you wake up in a place you do not recognize')
+                time.sleep(b)
+                print()
+                print('it is a work camp for prisoners of war')
+                time.sleep(b)
+                print()
+                print('a great war has been going on between the two largest super powers in the galaxy')
+                time.sleep(b)
+                print()
+                print('The Axis of Might (a group of planets allied together including Blackmire)')
+                time.sleep(b)
+                print()
+                print('has been at war with the most advanced planet Armada')
+                time.sleep(b)
+                print()
+                print('in this camp you are forced to work in mines')
+                time.sleep(b)
+                print()
+                print('this is not very enjoyable')
+                print()
+                time.sleep(b)
+                print('do you')
+                time.sleep(b)
+                print(67 * "-")
+                print('stay at the camp and hope the war ends(1)')
+                print('or')
+                print('attempt to escape(2)')
+                print(67 * "-")
+                
+                blackmire_4 = input('what option do you choose? (1/2)')
+                if blackmire_4 == '1':
+                        print('that\'s lame')
+                        print('you live out the rest of your life in a work camp')
+                        print('GAME OVER')
+                        print()
+                        print('it is recommended that you try to escape next time') 
+                if blackmire_4 == '2':
+                        print('How will you escape?')
+                        print (67 * "-")
+                        print('dig a tunnel(1)')
+                        print('or')
+                        print('Impersonate a guard by stealing clothes(2)')
+                        print (67 * "-")
+                        blackmire_6 = input('What option do you choose?(1/2)')
+                if blackmire_6 == '1':
+                            print(67 * "-")
+                            print('after 2 years of digging a tunnel with spoons')
+                            time.sleep(b)
+                            print()
+                            print('you are able escape with a couple other prisoners at the camp')
+                            time.sleep(b)
+                            print()
+                            print('you live out the rest of your life peacefully in a cabin in the mountains of Blackmire')
+                            time.sleep(b)
+                            blackmire_win()
+                            print('YOU WIN')
+                            print()
+                            print('go try another planet ')
+                if blackmire_6 == '2':
+                            print('stage 1 of the plan went well')
+                            print()
+                            time.sleep(b)
+                            print('you steal a guards clothes')
+                            print()
+                            
+                            print('but you are recognized and executed for trying to escape')
+                            print('GAME OVER')
+
+            
+def planet2():
+    print("WELCOME TO ARMADA")
+    print('    __   __      ')            
+    print('   |  | |  |      /|')           
+    print('   |  | |  |  _  | |__ ')          
+    print(' __|  | |  |_| | | |  |/\_ ')   
+    print('|  |  | |  | | __| |  |   |')
+    print('|  |  |^|  | ||  | |  |   |') 
+    print('|  |  |||  | ||  | |  |   |')
+    time.sleep(b)
+    print()
+    print('You land near an enormous city')
+    time.sleep(b)
+    print()
+    print('As you walk around you come across two potentally useful buildings')
+    time.sleep(b)
+    print()
+    print(67 * "-")
+    print('An abandoned building where you could potentially find supplies(1)')
+    time.sleep(a)
+    print()
+    print('or')
+    print()
+    print('A casino where you could roll a dice to win some money(2)')
+    print(67 * "-")
+    time.sleep(a)
+    print()
+    
+    armada_1 = input('What option do you choose?(1/2)')
+    if armada_1 == '1':
+        time.sleep(b)
+        print()
+        print('you go into the building')
+        time.sleep(b)
+        print()
+        print('you find some supplies')
+        time.sleep(b)
+        print()
+        print('you hear voices')
+        time.sleep(b)
+        print()
+        print('you try to hide, but 3 men in dark clothing walk in a see you stealing their stuff')
+        time.sleep(b)
+        print()
+        print('immediately they start firing machine guns at you')
+        time.sleep(b)
+        print()
+        print('do you')
+        print(67 * "-")
+        print('run(1)')
+        print()
+        print('or')
+        print()
+        print('shoot back(2)')
+        print(67 * "-")
+        print()
+        armada_guns = input('What option do you choose(1/2)')
+        if armada_guns == '1':
+            print('you are shot as you try to run away')
+            print ('GAME OVER')
+        if armada_guns == '2':
+            print('you are able to shoot one')
+            print()
+            time.sleep(b)
+            print('but they still outnumber you')
+            print()
+            time.sleep(b)
+            print('how will you escape?')
+            print()
+            time.sleep(b)
+            print (67 * "-")
+            print('down the fire escape(1)')
+            print()
+            print('or')
+            print()
+            print('down the stairs you came up(2)')
+            print (67 * "-")
+            armada_10 = input('What option do you choose(1/2)')
+            if armada_10 == '1':
+                print()
+                print('good job!, you easily escape with the supplies')
+                print()
+                time.sleep(b)
+                print('you fly your ship out of the city')
+                print()
+                time.sleep(b)
+                print('you are now in the countryside')
+                print()
+                time.sleep(b)
+                print('you come across a a white house that looks as if no one has lived there in years')
+                print()
+                time.sleep(b)
+                print('you go in the house and go down the stairs')
+                print()
+                time.sleep(b)
+                print('there is a small iron trapdoor')
+                print()
+                time.sleep(b)
+                print('you discover a vent leading down with a laddar')
+                print()
+                time.sleep(b)
+                print('you go down into the vent')
+                print()
+                time.sleep(b)
+                print('when you reach the bottom there is a door')
+                print()
+                time.sleep(b)
+                print('you go through that door and find yourself in a massive cavern')
+                print()
+                time.sleep(b)
+                print('you found a secret Armada military base')
+                print()
+                time.sleep(b)
+                print('a man walks by')
+                print()
+                print (67 * "-")
+                print('do you follow him(1)')
+                print('or')
+                print('try to find a way out(2)')
+                print (67 * "-")
+                print()
+                armada_base = input('What option do you choose?(1/2)')
+                if armada_base == '1':
+                    print('you follow him')
+                    time.sleep(b)
+                    print()
+                    print('he walks into a room and you manage to slip in without anyone noticing')
+                    time.sleep(b)
+                    print()
+                    print('you realize in the center in the massive room there is a bomb')
+                    print()
+                    time.sleep(b)
+                    print('a massive bomb')
+                    print()
+                    time.sleep(b)
+                    print('they are planning to destroy the entire planet of B with a bomb')
+                    print()
+                    time.sleep(b)
+                    print('do you?')
+                    print (67 * "-")
+                    print('let it happen(1)')
+                    print('warn Blackmire that there is a bomb coming(2)')
+                    print (67 * "-")
+                    print()
+                    blackmire_bomb = input('What option do you choose(1/2)')
+                    if blackmire_bomb == '1':
+                        print('Armada launches their bomb but Blackmire launches one back')
+                        print()
+                        print('Both planets are destroyed')
+                        print()
+                        print('GAME OVER')
+                    if blackmire_bomb == '2':
+                        print('Blackmire is able to destroy the bomb before it got to them')
+                        armada_win()
+                        print('You saved them')
+                        print()
+                        print('YOU WIN')
+                if armada_base == '2':
+                    print()
+                    print('an Armada soldier finds you')
+                    print()
+                    print('you go to jail')
+                    print()
+                    print('GAME OVER')
+                    print('it is recommended that you follow the man next time')   
+            if armada_10 == '2':
+                print('the stairs are too out in the open')
+                print('you are shot and killed')
+                print('GAME OVER')
+        
+    if armada_1 == '2':
+        print('you walk into the casino')
+        time.sleep(b)
+        print()
+        print('you play a dice game')
+        time.sleep(b)
+        print()
+        userScore = 0
+        userTries = 20
+        print(67 * "-")
+        print ("Guess the number(1-6) that is about to be rolled. Get a score of 3 to win!")
+        print ("Your score is:", userScore, "\n")
+        print(67 * "-")
+
+        while (userScore < 3):
+                while (userTries >= 0):
+
+                        diceNum = (1, 2, 3, 4, 5, 6,)
+
+                        print ("Tries left:", userTries, "\n")
+                        userGuess = input ("Enter your guess: " )
+                        
+                        if (int(userGuess) not in diceNum):
+                                print (userGuess, "\nis not a valid guess, try again.")
+                                userTries -= 1
+
+			
+                        else:
+                                diceNum = random.choice(diceNum)
+                                print ("\nThe dice rolled...", diceNum)
+
+			
+                        if (int(diceNum) == int(userGuess)):
+                                userScore += 1
+                                print ("You guessed it right! +1")
+                                print ("Your score:", userScore)
+
+			
+                        elif (int(diceNum) != int(userGuess)):
+                                userTries -= 1
+                                print ("You guessed wrong try again -1 try")
+                                print ("Your score: ", userScore)
+
+			
+                        if (userTries == 0):
+                                break
+                        elif (userScore == 3):
+                                break
+                if (userTries == 0):
+                        print('YOU RUN OUT OF TRIES AND GO BROKE')
+                        print('GAME OVER')
+                        break
+                elif (userScore == 3):
+                        print()
+                        print('YOU WIN LOTS OF MONEY')
+                        print()
+                        time.sleep(b)
+                        print()
+                        print('the casino owners are not happy that you got so lucky')
+                        time.sleep(b)
+                        print()
+                        print('as you walk out of the casino')
+                        time.sleep(b)
+                        print()
+                        print('a group of gangsters corner you down an allyway')
+                        time.sleep(b)
+                        print('do you?')
+                        print()
+                        print(67 * "-")
+                        print('try to bribe them(1)')
+                        print()
+                        print('or')
+                        print()
+                        print('try to fight using your pistol(2)')
+                        print(67 * "-")
+                        print()
+                         
+
+                        
+                        armada_fight = input('What option do you choose? (1/2/3)  ')
+                        if armada_fight == '1':
+                            print('they take your bribes')
+                            time.sleep(b)
+                            print()
+                            print('you escape, then go into a government building')
+                            time.sleep(b)
+                            print()
+                            print('in the building there is information about Armada')
+                            time.sleep(b)
+                            print()
+                            print('you go over and have a look')
+                            time.sleep(b)
+                            print()
+                            print('Armada has been at a war with a group of planets over resources')
+                            
+                            time.sleep(b)
+                            print('many Armada citizens had been drafted to be soldiers in the war')
+                            print()
+                            time.sleep(b)
+                            print('the death count on both sides is reaching record highs')
+                            print()
+                            time.sleep(b)
+                            print('enemy Blackmire soldiers have envaded the city of Deaviant')
+                            time.sleep(b)
+                            print()
+                            print('intrested in seeing what was happening at Deaviant you fly your ship there')
+                            time.sleep(b)
+                            print()
+                            print('you do a fly over and the city is nothing but wreckage')
+                            print()
+                            time.sleep(b)
+                            print('you land near a trashed building')
+                            print()
+                            time.sleep(b)
+                            print('all of a sudden a skirmish between Blackmire and Armada ships starts happening in the sky above')
+                            print()
+                            print('do you')
+                            print(67 * "-")
+                            print('try to fly out of there(1)')
+                            print('take shelter in the building(2)')
+                            print(67 * "-")
+                            armada_3 = input()
+                            if armada_3 == '1':
+                                print('you get caught in the crossfire')
+                                print('GAME OVER')
+                            if armada_3 == '2':
+                                print('you wait out the battle')
+                                print('you fly away in your ship')
+                                print('you live out the rest of your life in peace')
+                                armada_win()
+                                print('YOU WIN')
+                                print('(try another planet now)')
+                            
+                            
+                            
+                            
+                        if armada_fight == '2':
+                            print('That was a bad idea')
+                            print()
+                            print('GAME OVER')
+                            print('(try not to fight them next time)')
+                                  
+                            
+
+
+
+            
+            
+                
+            
+    
+def planet3():
+    print("WELCOME TO MARANA")
+    print('       ^  ^  ^   ^        ^  ^   ^  ^  ^   ^  ^ ')
+    print('      /|\/|\/|\ /|\      /|\/|\ /|\/|\/|\ /|\/|\ ')
+    print('      /|\/|\/|\ /|\      /|\/|\ /|\/|\/|\ /|\/|\ ')
+    print('      /|\/|\/|\ /|\      /|\/|\ /|\/|\/|\ /|\/|\ ')
+    print("Watch out for the many monsters that inhabbit it")
+    print()
+    time.sleep(b)
+    print("you land your ship in a a very wet marsh ")
+    print()
+    time.sleep(b)
+    print("it is very dark and humid ")
+    print()
+    time.sleep(b)
+    print("you step out into a brush of grass ")
+    print()
+    time.sleep(b)
+    print("and feel a strange tingle on your foot")
+    print()
+    time.sleep(b)
+    print("it is a squid like creature trying to lock on to your skin")
+    print()
+    time.sleep(b)
+
+    print()
+    print("do you?")
+    print()
+    time.sleep(a)
+    print()
+    print("try to shoot it risking your own foot(1)")
+    time.sleep(a)
+    print()
+    print("kick it into a nearby rock(2)")
+    print()
+    time.sleep(a)
+    marana1 = input("what option do you choose? (1/2):")
+    if marana1 == '1':
+        print()
+        print("that was a bad idea")
+        print("you accidentally blast your foot off")
+        print()
+        print("GAME OVER")
+        
+    elif marana1 == '2':
+        print()
+        print("good idea the space squid is splattered into bits")
+        time.sleep(b)
+        print()
+        print('you keep moving through the dense swamp')
+        time.sleep(b)
+        print()
+        print('you come across a massive raging river')
+        time.sleep(b)
+        print()
+        print('there is a bridge with a small man next to it')
+        time.sleep(b)
+        print()
+        print('the man claims to be a wizard with magic powers')
+        time.sleep(b)
+        print()
+        print('but first you must answer his 3 questions')
+        print()
+        print('what is your name?')
+        name = input()
+        print()
+        print('well, '+name+' what is your favorite color')
+        color = input()
+        if color == 'blue':
+                print('did you mean yellow')
+                print('GAME OVER')
+                #monty python and the holy grail easter egg
+        else:
+        
+              
+                print('what number am I thinking of between 1 and 20')
+                time.sleep(b)
+                print()
+                print('if you guess the number within 5 guesses you get to cross the bridge')
+                time.sleep(b)
+                print()
+                print('if you don\'t guess the number within 5 guesses YOU WILL DIE')
+                print()
+                guessesTaken = 0
+
+                number = random.randint(1, 20)
+
+
+                while guessesTaken < 6:
+                    print('Take a guess.') 
+                    guess = input()
+                    guess = int(guess)
+
+                    guessesTaken = guessesTaken + 1
+
+                    if guess < number:
+                        print('Your guess is too low.') 
+
+                    if guess > number:
+                        print('Your guess is too high.')
+
+                    if guess == number:
+                        break
+
+                if guess == number:
+                    guessesTaken = str(guessesTaken)
+                    print('You guessed the number and you are able to cross the bridge')
+                    print()
+                    time.sleep(b)
+                    print(' you keep going until you find a cave to sleep in for the night')
+                    print()
+                    time.sleep(b)
+                    print('you walk into the cave')
+                    print()
+                    time.sleep(b)
+                    print('but then you see two big yellow eyes staring right back at you')
+                    print()
+                    time.sleep(b)
+                    print('a giant snake comes out of the darkness')
+                    print()
+                    time.sleep(b)
+                    print('you do not have time to run')
+                    print()
+                    time.sleep(b)
+                    print('it lunges at you')
+                    print()
+                    time.sleep(b)
+                    print('do you?')
+                    print()
+                    time.sleep(b)
+                    print('try to pull out your knife and stab it(1)')
+                    print()
+                    time.sleep(b)
+                    print('or shoot it with the gun that is already in your hand(2)')
+                    print()
+                    time.sleep(b)
+                    marana_snake = input('what option do you choose?(1/2)')
+                    if marana_snake == '1':
+                        print()
+                        print('you do not get your knife out in time')
+                        print()
+                        print('the snake eats you')
+                        print()
+                        print('GAME OVER')
+                    if marana_snake == '2':
+                        print('you get the snake right in the eye and kill it')
+                        time.sleep(b)
+                        print()
+                        print('you then find a village')
+                        time.sleep(b)
+                        print()
+                        print('but, the people there look very stange')
+                        time.sleep(b)
+                        print()
+                        print('everyone is male and looks very unclean')
+                        time.sleep(b)
+                        print()
+                        print('you had just walked into a pirate\'s camp')
+                        time.sleep(b)
+                        print()
+                        print('one of the men walks over to you')
+                        time.sleep(b)
+                        print()
+                        print('do you?')
+                        time.sleep(b)
+                        print()
+                        print('try to fit in(1)')
+                        print()
+                        print('run and report them(2)')
+                        print()
+                        marana_pirates = input('what option do you choose?(1/2)')
+                        if marana_pirates == '1':
+                            print('you join the pirates')
+                            time.sleep(b)
+                            print()
+                            print('after a few years with them you get your first major assignment')
+                            time.sleep(b)
+                            print()
+                            print('you have to hijack a Armada supply ship')
+                            time.sleep(b)
+                            print()
+                            print('do you?')
+                            time.sleep(b)
+                            print()
+                            print('attack the ship in the air(1)')
+                            print()
+                            print('attack the ship in the warehouse before it leaves(2)')
+                            print()
+                            marana_attack = input('what option do you choose?(1/2)')
+                            if marana_attack == '1':
+                                print('attacking in the air was the right plan')
+                                print('because of your big brain you are promoted')
+                                print('you live out the rest of your life as a pirate captain')
+                                armada_win()
+                                print('YOU WIN')
+                                        
+                                
+
+                            if marana_attack == '2':
+                                print()
+                                print('the security was way stronger than you thought')
+                                print()
+                                print('you and your team of pirates are captured')
+                                print()
+                                print('GAME OVER')
+
+                        if marana_pirates == '2':
+                            print('they figure out what you are doing right away')
+                            print()
+                            print('you are caught and killed')
+                            print()
+                            print('GAME OVER')
+                            print()
+                            print('it is recommended not to snitch next time')
+                        
+                    
+                    
+                          
+
+                if guess != number:
+                    number = str(number)
+                    print('The number the crazy wizard was thinking of was ' + number)
+                    time.sleep(a)
+                    print()
+                    print('Do you run away(1)')
+                    print()
+                    print('or')
+                    print()
+                    print('Do you go across the bridge anyway no matter what the wizard said(2)')
+        
+
+                    marana_run = input('what option do you choose (1/2)')
+                    if marana_run == '1':
+                        print('as you start to run away the crazy wizard trips you and you fall into the river')
+                        print('GAME OVER')
+                    if marana_run == '2':
+                        print('you start to cross the bridge but the crazy wizard cuts the rope holding the bridge up')
+                        print('you fall in')
+                        print('GAME OVER')
+
+       
+             
+playAgain = 'yes'
+while playAgain == 'yes' or playAgain == 'y':
+
+    displayIntro()
+
+
+    print('Do you want to play again? (yes or no)')
+    playAgain = input()
+else:
+    file = open("credits.txt")
+ 
+    for line in file:
+        print(line)
+     
+
+        
+
+
+          
+while gameOver == False:   
+    displayIntro()
+
+
+
+
+
+
+
+
+
+
+#1000 lines of code :)
+
+    
+
+
